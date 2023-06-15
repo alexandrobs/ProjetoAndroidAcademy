@@ -1,119 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:padding="16dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="128dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="B"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:layout_weigth="2" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:background="@color/purple_200"
-                android:padding="16dp"
-                android:text="TEXTO"
-                android:textSize="24sp"
-                app:fontFamily="@font/audiowide"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:layout_width="match_parent"
-                android:background="#9F9F9F"
-                android:layout_margin="16dp"
-                android:layout_height="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:background="@color/teal_200"
-                android:padding="16dp"
-                android:text="TEXTO"
-                android:textSize="24sp"
-                android:fontFamily="sans-serif-condensed-light"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:layout_width="match_parent"
-                android:background="#9F9F9F"
-                android:layout_margin="16dp"
-                android:layout_height="16dp" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:padding="16dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <View
-                android:layout_width="match_parent"
-                android:background="#9F9F9F"
-                android:layout_margin="16dp"
-                android:layout_height="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:background="@color/purple_200"
-                android:padding="16dp"
-                android:text="TEXTO"
-                android:textStyle="italic | bold"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:layout_width="match_parent"
-                android:background="#9F9F9F"
-                android:layout_margin="16dp"
-                android:layout_height="16dp" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="256dp"
-                android:layout_height="256dp"
-                app:tint="#EF0909"
-                android:src="@drawable/ic_baseline_emoji_people_24"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:padding="16dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <View
-                android:layout_width="match_parent"
-                android:background="#9F9F9F"
-                android:layout_margin="16dp"
-                android:layout_height="16dp" />
-
-        </LinearLayout>
-
-    </ScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weigth="2"
+            android:text="A"
+            android:textSize="32sp"
+            android:gravity="center"/>
+    </LinearLayout>
 
 </LinearLayout>
