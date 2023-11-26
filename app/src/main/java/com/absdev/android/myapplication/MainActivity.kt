@@ -17,15 +17,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun main () = runBlocking {
-        val job = launch {
-            delay(1000L)
-            println("World!")
+        repeat(50_000) {
+            launch {
+                delay(5000L)
+                print(".")
+            }
         }
-
-        println("Hello")
-        job.join()
-        println("Done")
     }
-
-
 }
