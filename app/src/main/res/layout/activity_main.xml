@@ -7,25 +7,4 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="B"
-            android:gravity="center"
-            android:textSize="32sp"
-            android:layout_weigth="2" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weigth="2"
-            android:text="A"
-            android:textSize="32sp"
-            android:gravity="center"/>
-    </LinearLayout>
-
 </LinearLayout>
