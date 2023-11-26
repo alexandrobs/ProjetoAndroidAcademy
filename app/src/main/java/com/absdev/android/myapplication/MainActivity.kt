@@ -2,6 +2,7 @@ package com.absdev.android.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -16,12 +17,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun main () = runBlocking {
-        launch { doWorld() }
-        println("Hello")
+        doWorld()
+        println("Done")
     }
 
-    suspend fun doWorld() {
-        delay(1000)
-        println("World!")
+    suspend fun doWorld() = coroutineScope {
+        launch {
+            delay(2000L)
+            println("World 2")
+        }
+        launch {
+            delay(1000L)
+            println("World 1")
+        }
+        println("Hello")
     }
 }
