@@ -17,19 +17,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun main () = runBlocking {
-        doWorld()
+        val job = launch {
+            delay(1000L)
+            println("World!")
+        }
+
+        println("Hello")
+        job.join()
         println("Done")
     }
 
-    suspend fun doWorld() = coroutineScope {
-        launch {
-            delay(2000L)
-            println("World 2")
-        }
-        launch {
-            delay(1000L)
-            println("World 1")
-        }
-        println("Hello")
-    }
+
 }
