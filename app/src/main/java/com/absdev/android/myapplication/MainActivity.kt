@@ -2,10 +2,7 @@ package com.absdev.android.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,12 +13,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun main () = runBlocking {
-        repeat(50_000) {
-            launch {
-                delay(5000L)
-                print(".")
-            }
+    fun main () {
+        GlobalScope.launch {
+            delay(1000)
+            println("Corotina executada!")
         }
     }
 }
