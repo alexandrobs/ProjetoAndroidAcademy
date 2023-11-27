@@ -14,9 +14,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun main () {
-        GlobalScope.launch {
+        val job = GlobalScope.launch {
             delay(1000)
             println("Corotina executada!")
         }
+
+        //cancelar corotina quando necessario
+        job.cancel()
     }
 }
