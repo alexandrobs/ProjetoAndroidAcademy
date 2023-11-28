@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#03A9F4"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/meuBotao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clique em mim"
-        android:layout_centerInParent="true" />
+    <!-- Contêiner para a fragment -->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Outros elementos da activity, se houver -->
 
 </RelativeLayout>
