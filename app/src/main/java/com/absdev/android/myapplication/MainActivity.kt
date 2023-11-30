@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
         val startTime = System.currentTimeMillis()
         println("Starting parent job...")
         parentJob = CoroutineScope(Main).launch {
-            launch(Dispatchers.Default) {
+            GlobalScope.launch {
                 work(1)
             }
-            launch(Dispatchers.Default) {
+            GlobalScope.launch {
                 work(2)
             }
         }
