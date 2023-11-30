@@ -4,11 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,10 +36,10 @@ class MainActivity : AppCompatActivity() {
         val startTime = System.currentTimeMillis()
         println("Starting parent job...")
         parentJob = CoroutineScope(Main).launch {
-            launch {
+            launch(Dispatchers.Default) {
                 work(1)
             }
-            launch {
+            launch(Dispatchers.Default) {
                 work(2)
             }
         }
